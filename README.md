@@ -4,16 +4,16 @@
 The entire stack is packaged in the terraform module "aws-website-api-lambda".
 
 ## lambda/
-This folder contains the lambda function code
-Each subfolder in this folder has lambda function code files for the specific function
+- This folder contains the lambda function code
+- Each subfolder in this folder has lambda function code files for the specific function
 
 ## main.tf
 Example file for how to use the module
 
 # Deployment
-To deploy an instance of the whole stack, instantiate the module in the project root as follows.
-Tags are optional, but can be used to separate different environments and perform auditing, accounting, etc.
-Prefix is mandatory and helps in distinguishing different instances of the deployed stack. Each resource name has this prefix string in the name, and helps distinguish resources visually very easily.
+- To deploy an instance of the whole stack, instantiate the module in the project root as follows.
+- Tags are optional, but can be used to separate different environments and perform auditing, accounting, etc.
+- Prefix is mandatory and helps in distinguishing different instances of the deployed stack. Each resource name has this prefix string in the name, and helps distinguish resources visually very easily.
 ```
 module "website-module-instance" {
   source = "./aws-website-api-lambda"

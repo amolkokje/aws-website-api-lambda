@@ -9,5 +9,5 @@ module "test-website" {
 }
 
 output "website_api_base_url" {
-  value = module.test-website.base_url
+  value = join("/", [module.test-website.base_url, ""])
 }
